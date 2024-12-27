@@ -150,6 +150,12 @@ function AboutSection() {
         <p className="text-lg mb-4">
           SANKALPA is a charitable Trust for promoting harmonious renaissance of ideas through simple technological initiatives in relatively backward and underdeveloped regions, for enhancing capabilities of local development organizations and providing financial inclusions for the rural people at large for greater financial sustenance and other charitable objects and purposes in India, hereinafter expressed for charitable purpose including relief to the poor, education, medical relief and advancement of any other object of general public utility not involving or carrying on of any activity for profit all over India and for this he is desirous of setting up a Public Charitable Trust for the advancement of the said object in India.
         </p>
+        <p className="text-lg mb-4 font-semibold flex justify-between">
+          <div> (Registration No. IV-1902-01361/2023)</div>
+          <div> (NITI Aayog No. WB/2023/0367402)</div>
+          <div> (80G - ABHTS6398HF20231)</div>
+          <div> (12A - ABHTS6398HE20231)</div>
+        </p>
       </div>
     </section>
   )
