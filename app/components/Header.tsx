@@ -1,10 +1,10 @@
 "use client"
 import Link from 'next/link'
 import Image from 'next/image'
-import { FaYoutube, FaFacebook, FaInstagram, FaBars, FaTimes } from 'react-icons/fa'
 import { useState } from 'react'
 import { Heart } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { FaBars, FaTimes } from 'react-icons/fa'
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,7 +12,7 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
   const router = useRouter();
-  const scrollToSection = (id : any) => {
+  const scrollToSection = (id : string) => {
    router.push(`/#${id}`);
     setIsOpen(false);
   };
@@ -53,7 +53,7 @@ export default function Header() {
             <FaInstagram className="text-white hover:text-pink-500" size={24} />
           </Link> */}
           <Link href="/donate">
-            <div className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300 flex gap-1.5 items-center">
+            <div className="bg-[#046A38] text-white py-2 px-4 rounded-lg font-semibold hover:bg-green-700 transition duration-300 flex gap-1.5 items-center">
               <Heart size={20} className="inline-block" fill='#fff' />
               Donate Now
             </div>

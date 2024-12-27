@@ -1,20 +1,6 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-
-const images = [
-    "/events/prize/1.jpg",
-    "/events/prize/2.jpg",
-    "/events/prize/3.jpg",
-    "/events/prize/4.jpg",
-    "/events/prize/5.jpg",
-    "/events/prize/6.jpg",
-    "/events/prize/7.jpg",
-    "/events/prize/8.jpg",
-    "/events/prize/9.jpg",
-
-]
 
 export default async function GalleryPage({
     params,
@@ -206,7 +192,7 @@ export default async function GalleryPage({
             ]
         },
     ]
-    const slug = (await params).slug
+    const slug = parseInt((await params).slug, 10)
     return (
 
         <div className="min-h-screen flex flex-col">
@@ -215,9 +201,9 @@ export default async function GalleryPage({
                 <section className="py-16 px-4">
                     <div className="container mx-auto">
                         <h1 className="text-4xl font-bold mb-8 text-center">
-                            "{(events as any)[slug].name}"</h1>
+                            &quot;{events[slug].name}&quot;</h1>
                         <div className="flex flex-wrap justify-center gap-4">
-                            {((events as any)[slug] as any).images.map((image: any, index: any) => (
+                            {(events[slug]).images.map((image, index) => (
                                 <div key={index} className="relative w-full sm:w-1/2 md:w-1/3 lg:w-1/4 h-48 sm:h-48 md:h-64 lg:h-72">
                                     <Image
                                         src={image}
